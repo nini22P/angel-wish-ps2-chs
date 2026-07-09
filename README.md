@@ -1,6 +1,6 @@
 # angel-wish-ps2-chs
 
-Chinese-Simplified localization toolchain for `Angel Wish 〜君の笑顔にチュッ！ 〜`
+Chinese-Simplified localization toolchain for `Angel Wish 〜君の笑顔にチュッ！〜`
 
 ## Usage
 
@@ -10,4 +10,5 @@ Chinese-Simplified localization toolchain for `Angel Wish 〜君の笑顔にチ�
 
 ## Credits
 
+- [punk7890/PS2-Visual-Novel-Tool](https://github.com/punk7890/PS2-Visual-Novel-Tool)
 - [akerou/fvp](https://github.com/akerou/fvp)
