@@ -30,6 +30,8 @@ fi
 
 python mapping_tool.py
 
+python patch_tool.py -b raw/iso/SLPM_658.28 -o build/SLPM_658.28 -c build/binary_mapped.csv -e shift_jis
+
 python script_tool.py import -i raw/SCRIPT/hcslist.bin -c build/script_mapped.csv -o build/SCRIPT/hcslist.bin
 
 python draw_font_texture.py -i raw/GLOBAL/sce24i24.bin -f assets/NotoSansCJKsc-Medium.otf -m build/mapping.toml -o build/24x24.png --offset-y 8
@@ -43,6 +45,7 @@ if [ -d "assets/COMMON" ]; then
 fi
 
 UMDReplaceK "build/Angel Wish - Kimi no Egao ni Chu! (Japan).iso" \
+    SLPM_658.28 build/SLPM_658.28 \
     DATA/SCRIPT.SAF build/SCRIPT.SAF \
     DATA/GLOBAL.SAF build/GLOBAL.SAF \
     DATA/COMMON.SAF build/COMMON.SAF \

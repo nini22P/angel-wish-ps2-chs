@@ -11,6 +11,12 @@ CSV_CONFIGS: list[Dict[str, Any]] = [
         'original_cols': ['text'],
         'translation_cols': ['translation']
     },
+    {
+        'input': 'binary.csv',
+        'output': 'build/binary_mapped.csv',
+        'original_cols': ['text'],
+        'translation_cols': ['translation']
+    },
 ]
 
 GRID_ROWS = 94
