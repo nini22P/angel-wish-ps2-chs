@@ -53,7 +53,7 @@ def export_csv(in_path, out_path):
             elif typ == 'u8':
                 bp += 2
 
-    with open(out_path, 'w', newline='', encoding='utf-8-sig') as f:
+    with open(out_path, 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=['offset', 'length', 'type', 'name', 'text', 'translation'])
         w.writeheader()
         w.writerows(rows)
@@ -63,7 +63,7 @@ def export_csv(in_path, out_path):
 def import_csv(in_path, csv_path, out_path):
     data = bytearray(Path(in_path).read_bytes())
 
-    with open(csv_path, 'r', encoding='utf-8-sig') as f:
+    with open(csv_path, 'r', encoding='utf-8') as f:
         for row in csv.DictReader(f):
             t = row.get('translation', '').strip()
             if not t:

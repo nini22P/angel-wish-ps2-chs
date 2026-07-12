@@ -74,7 +74,7 @@ def main() -> None:
             print(f"CSV not found: {path}")
             continue
 
-        with open(path, 'r', encoding='utf-8-sig', newline='') as f:
+        with open(path, 'r', encoding='utf-8', newline='') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 for col in config['original_cols']:
@@ -139,7 +139,7 @@ def main() -> None:
         if out_dir:
             os.makedirs(out_dir, exist_ok=True)
 
-        with open(path, 'r', encoding='utf-8-sig', newline='') as f:
+        with open(path, 'r', encoding='utf-8', newline='') as f:
             reader = csv.DictReader(f)
             fieldnames = reader.fieldnames
             rows = list(reader)
