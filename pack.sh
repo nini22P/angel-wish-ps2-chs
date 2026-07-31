@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-set -e
+set -euo pipefail
+
+pip install --user Pillow pngquant_py
 
 ROOT_DIR=$(pwd)
 
@@ -49,5 +51,6 @@ UMDReplaceK "build/Angel Wish - Kimi no Egao ni Chu! (Japan).iso" \
     DATA/SCRIPT.SAF build/SCRIPT.SAF \
     DATA/GLOBAL.SAF build/GLOBAL.SAF \
     DATA/COMMON.SAF build/COMMON.SAF \
+    DATA/01.PSS assets/01.PSS \
 
 echo "done"

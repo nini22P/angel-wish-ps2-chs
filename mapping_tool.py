@@ -88,8 +88,10 @@ def main() -> None:
                     if val:
                         for c in val:
                             chars_in_csv.add(c)
-                            if ord(c) >= 0x80 and c not in font_inventory:
-                                needed_chars.add(c)
+                            if ord(c) >= 0x80:
+                                slot = font_inventory.get(c)
+                                if slot is None or slot // GRID_COLS > KANJI_ROW_END:
+                                    needed_chars.add(c)
 
     potential_slots: list[str] = [
         c for c in font_inventory.keys()
